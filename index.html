@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>3D-audio</title>
+		<link href="plugins/default-style.css" rel="stylesheet" type="text/css" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="plugins/max.size.js"></script>
+		<script>
+			// Här bestäms vilken sida som visas först
+			window.addEventListener("load", () => location.href = "#intro");
+		</script>
+	</head>
+
+
+	<body>
+
+		<main class="max-size pages">
+
+
+<!-- INTRO -->
+			<section id="intro">
+				<h1>Introsidan</h1>
+				<p>Walk into a spooky place etc. etc.</p>
+				<a href="#courage">Courage</a>
+				<a href="#wisdom">Wisdom</a>
+				<a href="#power">Power</a>
+				<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
+			</section>
+
+<!-- FIRST MID POINT -->
+
+			<section id="mid_p">
+				<h1>Rubrik mid_p</h1>
+				<p>Text page1</p>
+				<a href="#courage">Till courage</a>
+				<a href="#wisdom">Till wisdom</a>
+			</section>
+
+			<section id="mid_w">
+				<h1>Rubrik mid_w</h1>
+				<p>Text page1</p>
+				<a href="#courage">Till courage</a>
+				<a href="#power">Till wisdom</a>
+			</section>
+
+			<section id="mid_c">
+				<h1>Rubrik mid_c</h1>
+				<p>Text page1</p>
+				<a href="#wisdom">Till wisdom</a>
+				<a href="#power">Till power</a>
+			</section>
+
+
+<!-- SECOND MID POINT -->
+
+			<section id="mid2_w_remain">
+				<h1>w_remain</h1>
+				<p>text w_remain</p>
+				<a href="#wisdom">till Wisdom</a>
+			</section>
+
+			<section id="mid2_p_remain">
+				<h1>p_remain</h1>
+				<p>text p_remain</p>
+				<a href="#power">till Power</a>
+			</section>
+
+			<section id="mid2_c_remain">
+				<h1>c_remain</h1>
+				<p>text c_remain</p>
+				<a href="#courage">till Courage</a>
+			</section>
+			
+
+<!-- TRIALS -->
+			
+			<section id="courage">
+				<h1>Courage</h1>
+				<p>Text courage</p>
+				<a href="#mid_c">Vidare till mid_c</a>
+				
+			</section>
+
+			<section id="power">
+				<h1>Rubrik Power</h1>
+				<p>Text Power</p>
+				<a href="#mid_p">Vidare till mid_p</a>
+			</section>
+
+			<section id="wisdom">
+				<h1>Wisdom</h1>
+				<p>Wisdom text</p>
+				<a href="#mid_w">Vidare till mid_w</a>
+			</section>
+
+
+		</main>
+		<script src="plugins/WebAudioXML.js" data-source="audio-config.xml"></script>
+		<script src="plugins/imusic_091.js" data-music-structure="music.xml"></script>
+		<script src="plugins/script.js"></script>
+		<script src="plugins/script_notechecker.js"></script>	
+	
+	
+	</body>
+</html>
