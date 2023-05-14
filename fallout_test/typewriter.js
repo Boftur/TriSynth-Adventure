@@ -1,8 +1,23 @@
 import * as qtexts from "./texts";
 const quest_text_power = texts.quest_text("power")
 
+// this is how it works atm
 // set up text to print, each item in array is new line
-    var aText = quest_text_power;
+    var aText = new Array(
+        "There are only 10 types of people in the world:", 
+        "Those who understand binary, and those who don't"
+        );
+
+
+
+//  This is what I want, methinks 
+    // var aText = quest_text_power;
+
+
+
+
+
+
     var iSpeed = 100; // time delay of print out
     var iIndex = 0; // start printing array at this posision
     var iArrLength = aText[0].length; // the length of the text array
