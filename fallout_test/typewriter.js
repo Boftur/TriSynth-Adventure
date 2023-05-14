@@ -1,5 +1,5 @@
 import * as qtexts from "./texts";
-const quest_text_power = texts.quest_text("power")
+const quest_text_power = texts.qtexts("power")
 
 // this is how it works atm
 // set up text to print, each item in array is new line
