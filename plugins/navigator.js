@@ -94,10 +94,18 @@ function navigator_function(n) {
             console.log("User input in Navigator: " + n);
         break;   
 
+        case "floor":
+            location.href = "#room_floor";
+            console.log("User input in Navigator: " + n);
+        break;  
+
         default:
             location.href = "#shadow_realm";
             console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
         break;    
+
+
+
 
 
 }

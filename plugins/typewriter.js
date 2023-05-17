@@ -72,7 +72,7 @@ import * as qtexts from "./texts.js";
         }
     }
 
-    function loopThroughArray (arr) {
+    export function loopThroughArray (arr) {
         let uglyString = "";
         
         for(let element of arr) {

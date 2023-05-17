@@ -62,7 +62,6 @@ export function quest_text(user_input) {
             " ",
             "There are only three objects:",
             " ",
-            " ",
             "There is a large chest in dark oak along the wall to your left, of the type that would suit a brandy-smelling sea captain. On the heavy lid is merely a clasp.",
 
             "Straight ahead is what appears to be a wooden bureau, what looks like ivory fish-fingers strewn about. Occasional black ones are posed at regular intervals.",
@@ -116,7 +115,7 @@ export function quest_text(user_input) {
             return Array(
                 "Ah.",
                 " ",
-                "You note that upon closer inspection, that’s a piano. Which is much more reasonable in hindsight.", 
+                "You note that upon closer inspection, that's a piano. Which is much more reasonable in hindsight.", 
                 " ",
                 " ",
                 "The keys are laden with a thin layer of dust." 
@@ -149,12 +148,26 @@ export function quest_text(user_input) {
         );
         break;
 
+    case "room_floor":
+            // Leave this console output, or everything breaks
+            console.log(" ");
+            return Array(
+            "Ah, yes, the floor is made out of floor."
+                
+        );
+        break;
+
 
     case "room_exit":
             // Leave this console output, or everything breaks
             console.log(" ");
             return Array(
-                "The wall glares back",
+                "As the four notes of the Dm7 in first inversion rings out you hear a click as the chest opens to reveal a key on a satin pillow.",
+                "Picking the key up, you notice something glaring at you.",
+                " ",
+                "It's the wall.",
+                " ",
+                "The wall glares at you.",
                 " ",
                 "Still glaring, louder this time, it slides to the side.", 
                 " ",

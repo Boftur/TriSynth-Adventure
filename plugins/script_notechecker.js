@@ -1,3 +1,4 @@
+import { loopThroughArray } from "./typewriter.js";
 
 var correctNotes_wisdom = [62,65,69];
 var correctNotes_power = [60,62,64]
@@ -48,7 +49,8 @@ waxml.addEventListener("init", e => {
 
                     // remove oldest note if userNotes are longer than correctNotes (not anymore)
                     userNotes = [];
-                    alert("STOP PLAYING THE WRONG THING YOU ASSHOLE")
+                     alert("Nothing happens.");
+                    // loopThroughArray(["Nothing happens." ]);
 
                 }
                 

@@ -39,7 +39,7 @@
 
 <!-- INTRO -->
 		<section id="intro1">
-			<h1>Welcome, player</h1>
+			<h1>--SIM_KMH_1D307--</h1>
 
 			<p>______________________________________________________________________________________________</p>
 			<div>
@@ -106,15 +106,26 @@
 			</div></br>
 		</section>
 
+
+		<section id="room_floor">
+			<h1>The Floor</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_floor"></span><span class="blinking">|</span>
+			</div></br>
+		</section>
+
 	<!-- PIANOT UTAN, SEN MED PIANOT -->
 		<section id="room_piano_nokeys">
 			<h1>The Bureau</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
-			<a class="button" href="#room_piano_keys">Open piano</a>
+
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_piano_nokeys"></span><span class="blinking">|</span>
 			</div></br>
+			<a class="button" href="#room_piano_keys">Open piano</a>
 
 		</section>
 
@@ -122,12 +133,12 @@
 		<section id="room_piano_keys">
 			<h1>The Piano</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
-			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
-			<a class="button" href="#room_piano_nokeys">Close the piano</a>
 			<p>______________________________________________________________________________________________</p>
 			<div>
-				<span id="typedtext_room_keys"></span><span class="blinking">|</span>
+				<span id="typedtext_room_piano_keys"></span><span class="blinking">|</span>
 			</div></br>
+			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
+			<a class="button" href="#room_piano_nokeys">Close the piano</a>
 
 		</section>
 
@@ -173,7 +184,7 @@
 	</section>
 	
 	<section id="shadow_realm">
-		<h1>HELP PAGE</h1>
+		<h1>SHADOW REALM</h1>
 		<a class="button" href="#room_main_2">Back to the Room</a>
 		<p>______________________________________________________________________________________________</p>
 		<div>
@@ -194,7 +205,7 @@
 		<script src="plugins/WebAudioXML.js" data-source="audio-config.xml"></script>
 		<script src="plugins/imusic_091.js" data-music-structure="music.xml"></script>
 		<script src="plugins/script.js"></script>
-		<script src="plugins/script_notechecker.js"></script>	
+		<script src="plugins/script_notechecker.js" type="module"></script>	
 		<script src="plugins/typewriter.js" type="module"></script>
 		<script src="plugins/navigator.js"></script>
 	
