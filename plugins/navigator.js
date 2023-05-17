@@ -1,7 +1,7 @@
 
-let destination_test = document.getElementById("mytextinput")
+let destination_input = document.getElementById("mytextinput")
 
-console.log(destination_test)
+console.log(destination_input)
 
 function navigator_function(n) {
     if (n == "Next")
@@ -9,7 +9,7 @@ function navigator_function(n) {
         console.log("User input: " + n)
     
     if (n == "Goghe")
-        location.href = "#power"
+        location.href = "#"
         console.log("User input: " + n)
 
 

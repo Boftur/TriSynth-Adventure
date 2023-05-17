@@ -1,12 +1,43 @@
+// Imports quest-texts from texts.js
 import * as qtexts from "./texts.js";
 
-    const destination = document.getElementById("typedtext");
+// On hashchange redefines destination and shoots typewriter
+    var current_location = "intro1"
+    window.addEventListener("hashchange", () => current_location = location.hash);
+    window.addEventListener("hashchange", () => console.log("Current_location is currently:" + current_location));
 
-    const iSpeed = 10; // time delay of print out
+    window.addEventListener("hashchange", (reseledaren));
+    window.addEventListener("hashchange", () => console.log("Reseledaren returnerar just nu:" + reseledaren()));
+    
+    window.addEventListener("hashchange", (typewriter));
+
+
+// Defines the destination, returns "typedtext_HASHGOESHERE"
+// Idea was every section in index gets a unique ID based on current hash. Typewriter shoots to specific visible section.
+    
+    function reseledaren(){
+
+
+        const segments = current_location.split('#');
+        const last = segments.pop() || segments.pop(); // Handle potential trailing slash
+        console.log("Current hash is: " + last);
+
+        // hash + typedtext -> destionationsID för print
+        const destination_parser = "typedtext_" + last
+        console.log("Current parser: " + destination_parser)
+        return(destination_parser)
+    }
+
+
+    const destination = document.getElementById(reseledaren());
+// Typewriter-variables
+    const iSpeed = 50; // time delay of print out
     const iMaxLines = 20; // maximum lines to be displayed before removing the first one
 
     let uglyArray = new Array();
      
+
+// Typewriter-thing
     function typewriter()
     {
         let aText = getDataFromArray();
@@ -14,7 +45,7 @@ import * as qtexts from "./texts.js";
     }
 
     function getDataFromArray() {
-        return qtexts.quest_text("power");
+        return qtexts.quest_text(current_location);
     }
 
     function showText(message, index, interval) {

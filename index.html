@@ -9,6 +9,7 @@
 		<script>
 			// Här bestäms vilken sida som visas först
 			window.addEventListener("load", () => location.href = "#intro1");
+			window.addEventListener("hashchange", () => console.log("Now going to hash: " + location.hash));
 		</script>
 
 		    <!-- <header class="site clearfix">
@@ -42,13 +43,13 @@
 
 			<p>________________________________________________________________________</p>
 			<div>
-				<span id="typedtext"></span><span class="blinking">|</span>
-			  </div></br>
+				<span id="typedtext_intro1"></span><span class="blinking">|</span>
+			</div></br>
 			<form>
 				<label>Name >></label><input type="text" /><br />
 				<label>Employee ID >></label><textarea id="text" rows="1"></textarea><br/><br/><br/>
 				<a class="button" alt="" href="#intro2">Submit</a>
-				</form> -->
+				</form>
 		</section>
 
 
@@ -56,7 +57,9 @@
 			<h1>Introductory room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
 			<p>________________________________________________________________________</p>
-			<p>Welcome. To finish this module we will be needing your utmost attention.</p></br>
+			<div>
+				<span id="typedtext_intro2"></span><span class="blinking">|</span>
+			</div></br>
 		</section>
 
 
