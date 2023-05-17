@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>3D-audio</title>
+		<title>Trisynth Adventure</title>
 		<link href="plugins/default-style.css" rel="stylesheet" type="text/css" />
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		<script src="plugins/max.size.js"></script>
@@ -10,23 +10,102 @@
 			// Här bestäms vilken sida som visas först
 			window.addEventListener("load", () => location.href = "#intro");
 		</script>
+
+		    <!-- <header class="site clearfix">
+      <div class="col one">
+        <img src="https://assets.codepen.io/2856/Logo_591Design_2015-12-01.png" alt="591 Systems" width="740" height="729" id="logo-v" />
+      </div>
+      <div class="col two">
+        <h4>591 Systems (tm) <br /> <b>H</b>euristically <b>E</b>ncrypted <b>R</b>ealtime <b>O</b>perating <b>S</b>ystem (HEROS)</h4>
+        <p>----------------------------------------</p>
+        <p>HEROS v 1.0.0</p>
+        <p>(c)2022 591 Industries</p>
+        <p>- Server 591 -</p>
+      </div>
+    </header> -->
+
+
 	</head>
 
 
 	<body>
-
+		<div class="overlay"></div>
+		<div class="scanline"></div>
+		<div class="wrapper">
+			<div class="content clearfix">
 		<main class="max-size pages">
 
 
 <!-- INTRO -->
 			<section id="intro">
-				<h1>Introsidan</h1>
-				<p>Walk into a spooky place etc. etc.</p>
-				<a href="#courage">Courage</a>
-				<a href="#wisdom">Wisdom</a>
-				<a href="#power">Power</a>
-				<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
+				<h1>Welcome, player</h1>
+
+				<p>________________________________________________________________________</p>
+				<p>Welcome. To finish this module we will be needing your utmost attention.</p></br>
+				<form>
+					<label>Name >></label><input type="text" /><br />
+					<label>Employee ID >></label><textarea id="text" rows="1"></textarea><br/><br/><br/>
+					<a class="button" alt="" href="#room_main_1">Submit</a>
+				  </form> -->
 			</section>
+
+
+
+<!-- ROOM TRIAL -->
+			
+	<!-- ROOM FIRST ENTRY -->
+		<section id="room_main_1">
+			<h1>Rubrik Power</h1>
+			<p>________________________________________________________________________</p>
+			<p>Text Power</p>
+			
+			<a class="button" href="#room_painting">Gå till tavlan</a>
+			<a class="button" href="#room_wall">Gå till väggen</a>
+			<a class="button" href="#room_piano_nokeys">Gå till byrån</a>
+		</section>
+
+	<!-- ROOM AFTER HAVING VISITED -->
+		<section id="room_main_2">
+			<h1>Rubrik Power</h1>
+			<p>Text Power</p>
+			
+			<a class="button" href="#room_painting">Gå till tavlan</a>
+			<a class="button" href="#room_wall">Gå till väggen</a>
+			<a class="button" href="#room_piano_nokeys">Gå till byrån</a>
+		</section>
+
+	<!-- MÅLNINGEN -->
+		<section id="room_painting">
+			<h1>Rubrik mid_p</h1>
+			<p>Text page1</p>
+			<a href="#room_main_2">Tillbaka</a>
+			<a href="#wisdom">Till wisdom</a>
+		</section>
+
+	<!-- VÄGGEN -->
+		<section id="room_wall">
+			<h1>Rubrik mid_p</h1>
+			<p>Text page1</p>
+			<a class="button" href="#room_main_2">Tillbaka</a>
+		</section>
+
+	<!-- PIANOT UTAN, SEN MED PIANOT -->
+		<section id="room_piano_nokeys">
+			<h1>Rubrik mid_p</h1>
+			<p>Text page1</p>
+			<a class="button" href="#room_piano_keys">Öppna pianot</a>
+			<a class="button" href="#room_main_2">Tillbaka</a>
+		</section>
+
+
+		<section id="room_piano_keys">
+			<h1>Rubrik mid_p</h1>
+
+			<p>Text page1</p>
+			<a class="button" href="#room_piano_nokeys">Stäng pianot</a>
+			<a class="button" href="#room_main_2">Tillbaka</a>
+			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
+		</section>
 
 <!-- FIRST MID POINT -->
 
@@ -73,8 +152,8 @@
 			</section>
 			
 
-<!-- TRIALS -->
-			
+
+
 			<section id="courage">
 				<h1>Courage</h1>
 				<p>Text courage</p>
@@ -82,11 +161,7 @@
 				
 			</section>
 
-			<section id="power">
-				<h1>Rubrik Power</h1>
-				<p>Text Power</p>
-				<a href="#mid_p">Vidare till mid_p</a>
-			</section>
+
 
 			<section id="wisdom">
 				<h1>Wisdom</h1>
@@ -94,8 +169,13 @@
 				<a href="#mid_w">Vidare till mid_w</a>
 			</section>
 
+		</div>
+		</div>	
+		
+	
+	</main>
 
-		</main>
+
 		<script src="plugins/WebAudioXML.js" data-source="audio-config.xml"></script>
 		<script src="plugins/imusic_091.js" data-music-structure="music.xml"></script>
 		<script src="plugins/script.js"></script>
