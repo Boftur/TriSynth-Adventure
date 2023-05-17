@@ -2,7 +2,8 @@ import * as qtexts from "./texts.js";
 
     const destination = document.getElementById("typedtext");
 
-    const iSpeed = 50; // time delay of print out
+    const iSpeed = 10; // time delay of print out
+    const iMaxLines = 20; // maximum lines to be displayed before removing the first one
 
     let uglyArray = new Array();
      
@@ -18,24 +19,25 @@ import * as qtexts from "./texts.js";
 
     function showText(message, index, interval) {
         if (index <= message.length) {
+            if(uglyArray.length > iMaxLines && index == uglyArray[iMaxLines - 1]) {
+                destination.removeChild(destination.getElementsByTagName('span')[0]);
+                uglyArray.splice(18, 1);
+            }
             if(uglyArray.includes(index)) {
-                destination.appendChild(document.createElement("br"));
+                destination.getElementsByTagName('span')[destination.getElementsByTagName('span').length - 1].appendChild(document.createElement("br"));
+                destination.appendChild(document.createElement("span"));
             }
             if(message[index] === undefined) {
                 return;
             }
 
-            let tester = message[index];
-            destination.append(message[index++]);
+            destination.getElementsByTagName('span')[destination.getElementsByTagName('span').length - 1].innerHTML += message[index++];
             setTimeout(function () { showText(message, index, interval); }, interval);
         }
     }
 
     function loopThroughArray (arr, index) {
-        let startIndex = 0;
-
         let uglyString = "";
-
         
         for(let element of arr) {
             let lastElementInUglyArray = uglyArray[uglyArray.length-1];
@@ -53,7 +55,9 @@ import * as qtexts from "./texts.js";
     function writeAllLines(arrayOfStrings, index) {
         let startIndex = 0;
         let allLines = loopThroughArray(arrayOfStrings, index);
-        showText (allLines, 0, iSpeed);
+        let firstLine = document.createElement('span');
+        destination.appendChild(firstLine);
+        showText (allLines, startIndex, iSpeed);
     }
     
     typewriter();
