@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#title").focus();
-    $("#text").autosize();
+    // $("#title").focus();
+    // $("#text").autosize();
   });
   
