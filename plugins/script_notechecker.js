@@ -4,7 +4,7 @@ var correctNotes_power = [60,62,64]
 var userNotes = [];
 
 var correctNotes = [];
-correctNotes.push({hash:"#intro", notes: [62,65,69]});
+correctNotes.push({hash:"#room_piano_keys", notes: [65,69,74,76]});
 correctNotes.push({hash:"#power", notes: [62,65,75,80,50]});
 
 waxml.addEventListener("init", e => {
@@ -32,8 +32,8 @@ waxml.addEventListener("init", e => {
                     // goto success page
                     switch(window.location.hash){
         
-                        case "#intro":
-                            window.location.href = "#power";
+                        case "#room_piano_keys":
+                            window.location.href = "#room_exit";
                             break;
         
                         case "#power":
@@ -48,7 +48,7 @@ waxml.addEventListener("init", e => {
 
                     // remove oldest note if userNotes are longer than correctNotes (not anymore)
                     userNotes = [];
-                    alert("FEL DÅLIG MÄNNISKA")
+                    alert("STOP PLAYING THE WRONG THING YOU ASSHOLE")
 
                 }
                 

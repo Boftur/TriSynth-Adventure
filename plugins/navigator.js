@@ -3,13 +3,8 @@ let destination_input = document.getElementById("mytextinput")
 
 console.log(destination_input)
 
-function navigator_function(n) 
+function navigator_function(n) {
     switch(n) {
-        case "Start":
-            location.href = "#room_main_1";
-            console.log("User input in Navigator: " + n);
-        break;
-
         case "start":
             location.href = "#room_main_1";
             console.log("User input in Navigator: " + n);
@@ -19,29 +14,29 @@ function navigator_function(n)
         //     location.href = ""
         //     console.log("User input in Navigator: " + n)
         case "help":
-            location.href = "help";
+            location.href = "#help";
             console.log("User input in Navigator: " + n);
         break;
 
         case "help please":
-            location.href = "help_please";
+            location.href = "#help_please";
             console.log("User input in Navigator: " + n);   
         break;
 
         case "back":
-            location.href = "room_main_2";
+            location.href = "#room_main_2";
             console.log("User input in Navigator: " + n); 
         break;
 
 // TRIALS
     // PIANO
         case "piano":
-            location.href = "room_piano_nokeys";
+            location.href = "#room_piano_nokeys";
             console.log("User input in Navigator: " + n); 
         break;
 
         case "bureau":
-            location.href = "room_piano_nokeys";
+            location.href = "#room_piano_nokeys";
             console.log("User input in Navigator: " + n); 
         break;
 
@@ -57,7 +52,7 @@ function navigator_function(n)
 
 
     // PAINTING        
-        case "Gogh":
+        case "gogh":
             location.href = "#room_painting";
             console.log("User input in Navigator: " + n);
         break;
@@ -104,6 +99,8 @@ function navigator_function(n)
             console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
         break;    
 
+
+}
 
 }
 

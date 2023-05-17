@@ -327,3 +327,7 @@ a.button:hover {
 .blinking {
 	animation: blink-text 1000ms infinite;
 }
+
+form input[type="text"] {
+    text-transform: lowercase;
+}
