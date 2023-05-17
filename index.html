@@ -8,7 +8,7 @@
 		<script src="plugins/max.size.js"></script>
 		<script>
 			// Här bestäms vilken sida som visas först
-			window.addEventListener("load", () => location.href = "#intro");
+			window.addEventListener("load", () => location.href = "#intro1");
 		</script>
 
 		    <!-- <header class="site clearfix">
@@ -37,17 +37,27 @@
 
 
 <!-- INTRO -->
-			<section id="intro">
-				<h1>Welcome, player</h1>
+		<section id="intro1">
+			<h1>Welcome, player</h1>
 
-				<p>________________________________________________________________________</p>
-				<p>Welcome. To finish this module we will be needing your utmost attention.</p></br>
-				<form>
-					<label>Name >></label><input type="text" /><br />
-					<label>Employee ID >></label><textarea id="text" rows="1"></textarea><br/><br/><br/>
-					<a class="button" alt="" href="#room_main_1">Submit</a>
-				  </form> -->
-			</section>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext"></span><span class="blinking">|</span>
+			  </div></br>
+			<form>
+				<label>Name >></label><input type="text" /><br />
+				<label>Employee ID >></label><textarea id="text" rows="1"></textarea><br/><br/><br/>
+				<a class="button" alt="" href="#intro2">Submit</a>
+				</form> -->
+		</section>
+
+
+		<section id="intro2">
+			<h1>Introductory room</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>________________________________________________________________________</p>
+			<p>Welcome. To finish this module we will be needing your utmost attention.</p></br>
+		</section>
 
 
 
@@ -107,68 +117,6 @@
 			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
 		</section>
 
-<!-- FIRST MID POINT -->
-
-			<section id="mid_p">
-				<h1>Rubrik mid_p</h1>
-				<p>Text page1</p>
-				<a href="#courage">Till courage</a>
-				<a href="#wisdom">Till wisdom</a>
-			</section>
-
-			<section id="mid_w">
-				<h1>Rubrik mid_w</h1>
-				<p>Text page1</p>
-				<a href="#courage">Till courage</a>
-				<a href="#power">Till wisdom</a>
-			</section>
-
-			<section id="mid_c">
-				<h1>Rubrik mid_c</h1>
-				<p>Text page1</p>
-				<a href="#wisdom">Till wisdom</a>
-				<a href="#power">Till power</a>
-			</section>
-
-
-<!-- SECOND MID POINT -->
-
-			<section id="mid2_w_remain">
-				<h1>w_remain</h1>
-				<p>text w_remain</p>
-				<a href="#wisdom">till Wisdom</a>
-			</section>
-
-			<section id="mid2_p_remain">
-				<h1>p_remain</h1>
-				<p>text p_remain</p>
-				<a href="#power">till Power</a>
-			</section>
-
-			<section id="mid2_c_remain">
-				<h1>c_remain</h1>
-				<p>text c_remain</p>
-				<a href="#courage">till Courage</a>
-			</section>
-			
-
-
-
-			<section id="courage">
-				<h1>Courage</h1>
-				<p>Text courage</p>
-				<a href="#mid_c">Vidare till mid_c</a>
-				
-			</section>
-
-
-
-			<section id="wisdom">
-				<h1>Wisdom</h1>
-				<p>Wisdom text</p>
-				<a href="#mid_w">Vidare till mid_w</a>
-			</section>
-
 		</div>
 		</div>	
 		
@@ -180,6 +128,8 @@
 		<script src="plugins/imusic_091.js" data-music-structure="music.xml"></script>
 		<script src="plugins/script.js"></script>
 		<script src="plugins/script_notechecker.js"></script>	
+		<script src="plugins/typewriter.js" type="module"></script>
+		<script src="plugins/navigator.js"></script>
 	
 	
 	</body>
