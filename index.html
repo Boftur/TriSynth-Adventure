@@ -44,11 +44,11 @@
 			<p>________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_intro1"></span><span class="blinking">|</span>
-			</div></br>
+			</div>
 			<form>
 				<label>Name >></label><input type="text" /><br />
 				<label>Employee ID >></label><textarea id="text" rows="1"></textarea><br/><br/><br/>
-				<a class="button" alt="" href="#intro2">Submit</a>
+				<a class="button" alt="" href="#intro2" onChange="navigator_function()">Submit</a>
 				</form>
 		</section>
 
@@ -69,9 +69,11 @@
 	<!-- ROOM FIRST ENTRY -->
 		<section id="room_main_1">
 			<h1>Rubrik Power</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
 			<p>________________________________________________________________________</p>
-			<p>Text Power</p>
-			
+			<div>
+				<span id="typedtext_room_main_1"></span><span class="blinking">|</span>
+			</div></br>
 			<a class="button" href="#room_painting">Gå till tavlan</a>
 			<a class="button" href="#room_wall">Gå till väggen</a>
 			<a class="button" href="#room_piano_nokeys">Gå till byrån</a>
@@ -80,8 +82,11 @@
 	<!-- ROOM AFTER HAVING VISITED -->
 		<section id="room_main_2">
 			<h1>Rubrik Power</h1>
-			<p>Text Power</p>
-			
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_main_2"></span><span class="blinking">|</span>
+			</div></br>
 			<a class="button" href="#room_painting">Gå till tavlan</a>
 			<a class="button" href="#room_wall">Gå till väggen</a>
 			<a class="button" href="#room_piano_nokeys">Gå till byrån</a>
@@ -89,36 +94,103 @@
 
 	<!-- MÅLNINGEN -->
 		<section id="room_painting">
-			<h1>Rubrik mid_p</h1>
-			<p>Text page1</p>
+			<h1>The Painting</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_painting"></span><span class="blinking">|</span>
+			</div></br>
 			<a href="#room_main_2">Tillbaka</a>
 			<a href="#wisdom">Till wisdom</a>
 		</section>
 
 	<!-- VÄGGEN -->
 		<section id="room_wall">
-			<h1>Rubrik mid_p</h1>
-			<p>Text page1</p>
-			<a class="button" href="#room_main_2">Tillbaka</a>
+			<h1>The Wall</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_wall></span><span class="blinking">|</span>
+			</div></br>
 		</section>
 
 	<!-- PIANOT UTAN, SEN MED PIANOT -->
 		<section id="room_piano_nokeys">
-			<h1>Rubrik mid_p</h1>
-			<p>Text page1</p>
-			<a class="button" href="#room_piano_keys">Öppna pianot</a>
-			<a class="button" href="#room_main_2">Tillbaka</a>
+			<h1>The Bureau</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<a class="button" href="#room_piano_keys">Open piano</a>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_piano_nokeys"></span><span class="blinking">|</span>
+			</div></br>
+
 		</section>
 
 
 		<section id="room_piano_keys">
-			<h1>Rubrik mid_p</h1>
-
-			<p>Text page1</p>
-			<a class="button" href="#room_piano_nokeys">Stäng pianot</a>
-			<a class="button" href="#room_main_2">Tillbaka</a>
+			<h1>The Piano</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
 			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
+			<a class="button" href="#room_piano_nokeys">Close the piano</a>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_keys"></span><span class="blinking">|</span>
+			</div></br>
+
 		</section>
+
+
+	<!-- EXIT + TAG -->
+		<section id="room_exit">
+			<h1>The Wall 2: Electric Boogaloo</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_exit"></span><span class="blinking">|</span>
+			</div></br>
+
+		</section>
+
+		<section id="ending">
+			<h1>END OF SIMULATION</h1>
+			<p>________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_ending"></span><span class="blinking">|</span>
+			</div></br>
+
+		</section>
+
+	<!-- HELP -->
+	<section id="help">
+		<h1>HELP PAGE</h1>
+		<a class="button" href="#room_main_2">Back to the Room</a>
+		<p>________________________________________________________________________</p>
+		<div>
+			<span id="typedtext_help"></span><span class="blinking">|</span>
+		</div></br>
+
+	</section>
+
+	<section id="help_please">
+		<h1>HELP PAGE</h1>
+		<a class="button" href="#room_main_2">Back to the Room</a>
+		<p>________________________________________________________________________</p>
+		<div>
+			<span id="typedtext_help_please"></span><span class="blinking">|</span>
+		</div></br>
+	</section>
+	
+	<section id="shadow_realm">
+		<h1>HELP PAGE</h1>
+		<a class="button" href="#room_main_2">Back to the Room</a>
+		<p>________________________________________________________________________</p>
+		<div>
+			<span id="typedtext_shadow_realm"></span><span class="blinking">|</span>
+		</div></br>
+	</section>	
+
+
+
 
 		</div>
 		</div>	
