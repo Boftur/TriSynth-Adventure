@@ -44,6 +44,7 @@ section{
 	box-sizing: border-box;
 	background-size: cover;
 	transition: 10ms;
+	font-size: 0.8em;
 }
 
 /* När en section är "target" (d.v.s. man har klickat på en länk som pekar på det id:t blir den synlig - opacity: 1

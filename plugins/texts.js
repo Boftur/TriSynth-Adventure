@@ -16,7 +16,7 @@ export function quest_text(user_input) {
             
         );}
 
-    if (user_input == "intro2"){
+    else if (user_input == "intro2"){
         // Leave this console output, or everything breaks
         console.log(" ");
         return Array(
@@ -45,7 +45,7 @@ export function quest_text(user_input) {
             
         );}
 
-    if (user_input == "http://127.0.0.1:5500/#intro3"){
+    else if (user_input == "http://127.0.0.1:5500/#intro3"){
     // Leave this console output, or everything breaks
     console.log(" ");
     return Array(
@@ -53,13 +53,6 @@ export function quest_text(user_input) {
         "Wanna take a red 'un or a blu 'un",
         "Yo how's it goin"
     );}
-    
-    
-    
-    
-    
-    
-    
     
     else {
 
