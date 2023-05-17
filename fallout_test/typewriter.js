@@ -2,7 +2,7 @@ import * as qtexts from "./texts.js";
 
     const destination = document.getElementById("typedtext");
 
-    const iSpeed = 100; // time delay of print out
+    const iSpeed = 50; // time delay of print out
 
     let uglyArray = new Array();
      
