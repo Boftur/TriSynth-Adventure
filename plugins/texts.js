@@ -19,6 +19,7 @@ export function quest_text(user_input)
         );
         break;
 
+
     case "intro2":
         // Leave this console output, or everything breaks
         console.log(" ");
@@ -45,7 +46,6 @@ export function quest_text(user_input)
             "If you find yourself stuck, I can't  *actually* help you. That's a wee too advanced for our purposes.", 
             
             "Should you write “Help” anyway and be nice about it, I might yell encouragements"
-            
         );
         break;
 
