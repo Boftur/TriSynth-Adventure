@@ -8,7 +8,14 @@ html, body {
 }
 
 body {
-	background-color: black;
+	background: #383838;
+	color: #00dd00;
+	font-size: 64.5%;
+	font-size: 1.4em;
+	font-family: 'VT323', Courier;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -16,7 +23,7 @@ body {
 Detta här måtten sätter formatet för den aktiva ytan "main"
 till 16:9 med bredden 1000 pixlar */
 main {
-	background-color: white;
+	background-color: rgba(0, 0, 0, 0);
 	width: 1000px;
 	height: 562.5px;
 }
@@ -36,7 +43,7 @@ section{
 	padding: 20px;
 	box-sizing: border-box;
 	background-size: cover;
-	transition: 1500ms;
+	transition: 10ms;
 }
 
 /* När en section är "target" (d.v.s. man har klickat på en länk som pekar på det id:t blir den synlig - opacity: 1
