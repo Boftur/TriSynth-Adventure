@@ -3,7 +3,7 @@ let destination_input = document.getElementById("mytextinput")
 
 console.log(destination_input)
 
-function navigator_function(n) 
+function navigator_function(n) {
     switch(n) {
         case "Start":
             location.href = "#room_main_1";
@@ -104,7 +104,7 @@ function navigator_function(n)
             console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
         break;    
 
-
+    }
 }
 
 
