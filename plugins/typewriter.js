@@ -3,7 +3,7 @@ import * as qtexts from "./texts.js";
 
     let destination = document.getElementById("typedtext_intro1");
 // Typewriter-variables
-    const iSpeed = 30; // time delay of print out
+    const iSpeed = 10; // time delay of print out
     const iMaxLines = 13; // maximum lines to be displayed before removing the first one
     let currentAmountOfLines = 1;
 
@@ -11,6 +11,8 @@ import * as qtexts from "./texts.js";
 
 // On hashchange redefines destination and shoots typewriter
     var current_location = "intro1"
+    document.getElementById("intro1_submit").disabled = true;
+
     window.addEventListener("hashchange", () => {
         currentAmountOfLines = 1;
         current_location = location.hash.substring(1);
@@ -55,7 +57,7 @@ import * as qtexts from "./texts.js";
     }
 
     function showText(message, index, interval) {
-        console.log("UglyArray has " + uglyArray.length + " elements.");
+        //console.log("UglyArray has " + uglyArray.length + " elements.");
         if (index < message.length) {
             if(uglyArray.includes(index)) {
                 if(currentAmountOfLines >= iMaxLines) {
@@ -69,12 +71,13 @@ import * as qtexts from "./texts.js";
                     currentAmountOfLines++;
                 }
             }
-            if(message[index] === undefined) {
-                return;
-            }
 
             destination.getElementsByTagName('span')[destination.getElementsByTagName('span').length - 1].innerHTML += message[index++];
             setTimeout(function () { showText(message, index, interval); }, interval);
+        }
+        else {
+            document.getElementById("intro1_submit").disabled = false;
+            return;
         }
     }
 
@@ -91,12 +94,13 @@ import * as qtexts from "./texts.js";
             }
             uglyString += element;
         };
-        console.log("End of Loopthrougharray. UglyArray has " + uglyArray.length + " elements.");
+        //console.log("End of Loopthrougharray. UglyArray has " + uglyArray.length + " elements.");
         return uglyString;
     }
 
     function writeAllLines(arrayOfStrings) {
         let startIndex = 0;
+        destination.innerHTML="";
         let allLines = loopThroughArray(arrayOfStrings);
         let firstLine = document.createElement('span');
         destination.appendChild(firstLine);

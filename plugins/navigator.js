@@ -5,6 +5,11 @@ console.log(destination_input)
 
 function navigator_function(n) {
     switch(n) {
+        case "intro2":
+            location.href = "#intro2";
+            console.log("User input in Navigator: " + n);
+        break;
+        
         case "start":
             location.href = "#room_main_1";
             console.log("User input in Navigator: " + n);
