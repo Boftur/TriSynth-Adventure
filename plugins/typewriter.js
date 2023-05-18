@@ -18,8 +18,12 @@ import * as qtexts from "./texts.js";
         let current_destination = tripAdvisor();
         destination = document.getElementById(current_destination);
         console.log("Reseledaren returnerar just nu:" + current_destination);
-        uglyArray.length = 0;
 
+        if(current_location != "intro1") {
+            typewriter();
+        }
+    });
+    window.addEventListener("load", () => {
         typewriter();
     });
 
@@ -43,7 +47,7 @@ import * as qtexts from "./texts.js";
     function typewriter()
     {
         let aText = getDataFromArray();
-        writeAllLines(aText, 0);
+        writeAllLines(aText);
     }
 
     function getDataFromArray() {
@@ -51,12 +55,13 @@ import * as qtexts from "./texts.js";
     }
 
     function showText(message, index, interval) {
+        console.log("UglyArray has " + uglyArray.length + " elements.");
         if (index < message.length) {
             if(uglyArray.includes(index)) {
                 if(currentAmountOfLines >= iMaxLines) {
                     destination.removeChild(destination.getElementsByTagName('span')[0]);
                     //     destination.getElementsByTagName('span')[0]
-                    uglyArray.splice(iMaxLines - 1, 1);
+                    //uglyArray.splice(iMaxLines - 1, 1);
                 }
                 destination.getElementsByTagName('span')[destination.getElementsByTagName('span').length - 1].appendChild(document.createElement("br"));
                 destination.appendChild(document.createElement("span"));
@@ -75,7 +80,7 @@ import * as qtexts from "./texts.js";
 
     function loopThroughArray (arr) {
         let uglyString = "";
-        
+        uglyArray.length = 0;
         for(let element of arr) {
             let lastElementInUglyArray = uglyArray[uglyArray.length-1];
             if(lastElementInUglyArray === undefined) {
@@ -86,6 +91,7 @@ import * as qtexts from "./texts.js";
             }
             uglyString += element;
         };
+        console.log("End of Loopthrougharray. UglyArray has " + uglyArray.length + " elements.");
         return uglyString;
     }
 
@@ -97,6 +103,5 @@ import * as qtexts from "./texts.js";
 
         showText (allLines, startIndex, iSpeed);
     }
-    
-    //window.addEventListener("load", () => typewriter());
-    typewriter();
+
+    //typewriter();
