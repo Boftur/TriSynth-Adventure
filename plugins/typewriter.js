@@ -19,6 +19,7 @@ import * as qtexts from "./texts.js";
         destination = document.getElementById(current_destination);
         console.log("Reseledaren returnerar just nu:" + current_destination);
         uglyArray.length = 0;
+
         typewriter();
     });
 
@@ -32,9 +33,9 @@ import * as qtexts from "./texts.js";
         console.log("Current hash is: " + last);
 
         // hash + typedtext -> destionationsID för print
-        const destination_parser = "typedtext_" + last
-        console.log("Current parser: " + destination_parser)
-        return(destination_parser)
+        const destination_parser = "typedtext_" + last;
+        console.log("Current parser: " + destination_parser);
+        return(destination_parser);
     }
      
 

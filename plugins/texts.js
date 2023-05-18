@@ -1,4 +1,4 @@
-export function quest_text(user_input)
+export function quest_text(user_input) {
     switch(user_input) {
 
         case "intro1":
@@ -220,7 +220,7 @@ export function quest_text(user_input)
         // return array;
 
 
-
+    }
 
 
   }
