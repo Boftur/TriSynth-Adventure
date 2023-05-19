@@ -104,12 +104,7 @@ function navigator_function(n) {
             console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
         break;    
 
-
-
-
-
-}
-
+  }
 }
 
 
