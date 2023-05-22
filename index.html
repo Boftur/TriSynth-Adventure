@@ -174,7 +174,7 @@
 			<div>
 				<span id="typedtext_room_piano_nokeys"></span><span class="blinking">|</span>
 			</div></br>
-			<a class="button" href="#room_piano_keys">Open piano</a>
+			<button id="piano_nokeys_submit" class="button" href="#room_piano_keys" onclick="navigator_function('room_piano_keys')" disabled>Open piano</a>
 
 		</section>
 
@@ -188,7 +188,7 @@
 			</div></br>
 			<div id="piano_feedback">Nothing happens.</div>
 			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
-			<a class="button" href="#room_piano_nokeys">Close the piano</a>
+			<button id="piano_keys_submit" class="button" href="#room_piano_nokeys" onclick="navigator_function('piano')" disabled>Close the piano</a>
 
 		</section>
 

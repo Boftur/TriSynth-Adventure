@@ -53,7 +53,12 @@ function navigator_function(n) {
         case "straight ahead":
             location.href = "#room_piano_nokeys";
             console.log("User input in Navigator: " + n);
-        break;   
+        break;
+        
+        case "room_piano_keys":
+            location.href = "#room_piano_keys";
+            console.log("User input in Navigator: " + n);
+        break;
 
 
     // CHEST

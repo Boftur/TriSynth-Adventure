@@ -28,6 +28,13 @@ import * as qtexts from "./texts.js";
             currentTextInput.placeholder = "Please wait for the below text to finish printing.";
         }
 
+        if(current_location == "room_piano_nokeys") {
+            document.getElementById("piano_nokeys_submit").disabled = true;
+        }
+        else if(current_location == "room_piano_keys") {
+            document.getElementById("piano_keys_submit").disabled = true;
+        }
+
         if(current_location != "intro1") {
             typewriter();
         }
@@ -85,6 +92,12 @@ import * as qtexts from "./texts.js";
         else {
             if(current_location == "intro1") {
                 document.getElementById("intro1_submit").disabled = false;
+            }
+            else if(current_location == "room_piano_nokeys") {
+                document.getElementById("piano_nokeys_submit").disabled = false;
+            }
+            else if(current_location == "room_piano_keys") {
+                document.getElementById("piano_keys_submit").disabled = false;
             }
             else {
                 let currentTextInput = document.getElementById("mytextinput_" + current_location);
