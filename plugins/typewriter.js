@@ -3,7 +3,7 @@ import * as qtexts from "./texts.js";
 
     let destination = document.getElementById("typedtext_intro1");
 // Typewriter-variables
-    const iSpeed = 10; // time delay of print out
+    const iSpeed = 3; // time delay of print out
     const iMaxLines = 13; // maximum lines to be displayed before removing the first one
     let currentAmountOfLines = 1;
 
@@ -17,6 +17,7 @@ import * as qtexts from "./texts.js";
     window.addEventListener("hashchange", () => {
         currentAmountOfLines = 1;
         current_location = location.hash.substring(1);
+        document.getElementById("error_" + current_location).style.opacity = 0;
         console.log("Current_location is:" + current_location);
         let current_destination = tripAdvisor();
         destination = document.getElementById(current_destination);
@@ -93,17 +94,18 @@ import * as qtexts from "./texts.js";
             if(current_location == "intro1") {
                 document.getElementById("intro1_submit").disabled = false;
             }
-            else if(current_location == "room_piano_nokeys") {
-                document.getElementById("piano_nokeys_submit").disabled = false;
-            }
-            else if(current_location == "room_piano_keys") {
-                document.getElementById("piano_keys_submit").disabled = false;
-            }
             else {
                 let currentTextInput = document.getElementById("mytextinput_" + current_location);
                 currentTextInput.placeholder = "user input";
                 currentTextInput.disabled = false;
                 currentTextInput.focus();
+            }
+            
+            if(current_location == "room_piano_nokeys") {
+                document.getElementById("piano_nokeys_submit").disabled = false;
+            }
+            else if(current_location == "room_piano_keys") {
+                document.getElementById("piano_keys_submit").disabled = false;
             }
             return;
         }

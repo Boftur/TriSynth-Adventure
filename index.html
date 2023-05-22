@@ -55,6 +55,7 @@
 		<section id="intro2">
 			<h1>Introductory room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_intro2"/>
+			<div class="error_msg" id="error_intro2">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_intro2"></span><span class="blinking">|</span>
@@ -69,6 +70,7 @@
 		<section id="room_main_1">
 			<h1>The Room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_main_1"/>
+			<div class="error_msg" id="error_room_main_1">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_main_1"></span><span class="blinking">|</span>
@@ -79,6 +81,7 @@
 		<section id="room_main_2">
 			<h1>The Room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_main_2"/>
+			<div class="error_msg" id="error_room_main_2">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_main_2"></span><span class="blinking">|</span>
@@ -89,6 +92,7 @@
 		<section id="room_painting">
 			<h1>The Painting</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_painting"/>
+			<div class="error_msg" id="error_room_painting">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_painting"></span><span class="blinking">|</span>
@@ -99,6 +103,7 @@
 		<section id="room_chest">
 			<h1>The Chest</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_chest"/>
+			<div class="error_msg" id="error_room_chest">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_chest_open"></span><span class="blinking">|</span>
@@ -109,6 +114,7 @@
 		<section id="room_chest_open">
 			<h1>The Chest</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_chest_open"/>
+			<div class="error_msg" id="error_room_chest_open">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_chest_open"></span><span class="blinking">|</span>
@@ -120,6 +126,7 @@
 		<section id="room_wall">
 			<h1>The Wall</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_wall"/>
+			<div class="error_msg" id="error_room_wall">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_wall"></span><span class="blinking">|</span>
@@ -129,6 +136,7 @@
 		<section id="room_wall_sledge">
 			<h1>The Wall</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_wall_sledge"/>
+			<div class="error_msg" id="error_room_wall_sledge">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_wall_sledge"></span><span class="blinking">|</span>
@@ -139,6 +147,7 @@
 		<section id="room_floor">
 			<h1>The Floor</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_floor"/>
+			<div class="error_msg" id="error_room_floor">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_floor"></span><span class="blinking">|</span>
@@ -149,6 +158,7 @@
 		<section id="room_the">
 			<h1>The Room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_the"/>
+			<div class="error_msg" id="error_room_the">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_the"></span><span class="blinking">|</span>
@@ -158,6 +168,7 @@
 		<section id="room_mark">
 			<h1>The Room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_mark"/>
+			<div class="error_msg" id="error_room_mark">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_mark"></span><span class="blinking">|</span>
@@ -169,12 +180,12 @@
 		<section id="room_piano_nokeys">
 			<h1>The Bureau</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_piano_nokeys"/>
-
+			<div class="error_msg" id="error_room_piano_nokeys">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_piano_nokeys"></span><span class="blinking">|</span>
 			</div></br>
-			<button id="piano_nokeys_submit" class="button" href="#room_piano_keys" onclick="navigator_function('room_piano_keys')" disabled>Open piano</a>
+			<button id="piano_nokeys_submit" class="button" href="#room_piano_keys" onclick="navigator_function('room_piano_keys')">Open piano</a>
 
 		</section>
 
@@ -186,9 +197,9 @@
 			<div>
 				<span id="typedtext_room_piano_keys"></span><span class="blinking">|</span>
 			</div></br>
-			<div id="piano_feedback">Nothing happens.</div>
+			<div class="error_msg" id="error_room_piano_keys">Nothing happens.</div>
 			<waxml-midi-controller type="keyboard" width="600" height="100" keyCommands="1234567890" channel="1" midiIn="true" activeColor="green"></waxml-midi-controller>
-			<button id="piano_keys_submit" class="button" href="#room_piano_nokeys" onclick="navigator_function('piano')" disabled>Close the piano</a>
+			<button id="piano_keys_submit" class="button" href="#room_piano_nokeys" onclick="navigator_function('piano')">Close the piano</a>
 
 		</section>
 
@@ -197,6 +208,7 @@
 		<section id="room_exit">
 			<h1>The Wall 2: Electric Boogaloo</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput_room_exit"/>
+			<div class="error_msg" id="error_room_exit">Nothing happens.</div>
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_room_exit"></span><span class="blinking">|</span>

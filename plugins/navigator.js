@@ -1,5 +1,5 @@
 
-let destination_input = document.getElementById("mytextinput")
+let destination_input = document.getElementById("mytextinput");
 
 console.log(destination_input)
 
@@ -169,6 +169,11 @@ function navigator_function(n) {
     // DEFAULT
     
         default:
+            let current_location = location.hash.substring(1);
+            console.log("Showing Error message now");
+            console.log("Error element: error_" + current_location);
+            document.getElementById("error_" + current_location).style.opacity = 1;
+            setTimeout(function() { document.getElementById("error_" + current_location).style.opacity = 0; }, 2000);
            
         break;   
 

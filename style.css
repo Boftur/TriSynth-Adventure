@@ -230,9 +230,8 @@ textarea {
 
 }
 
-#piano_feedback {
+.error_msg {
 	color:red;
-	opacity: 0;
 }
 
 textarea {

@@ -67,8 +67,8 @@ function checkKeyboardInput(userNotes, targetNotes) {
         // reset entered notes
         userNotes.length = 0;
         //alert("Nothing happens.");
-        document.getElementById("piano_feedback").style.opacity = 1;
-        setTimeout(function() { document.getElementById("piano_feedback").style.opacity = 0; }, 2000);
+        document.getElementById("error_room_piano_keys").style.opacity = 1;
+        setTimeout(function() { document.getElementById("error_room_piano_keys").style.opacity = 0; }, 2000);
     }
 }
     
