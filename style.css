@@ -230,6 +230,11 @@ textarea {
 
 }
 
+#piano_feedback {
+	color:red;
+	opacity: 0;
+}
+
 textarea {
 	margin-bottom: 20px;
 	overflow: auto;

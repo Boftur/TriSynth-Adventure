@@ -13,6 +13,7 @@ import * as qtexts from "./texts.js";
     var current_location = "intro1"
     document.getElementById("intro1_submit").disabled = true;
 
+
     window.addEventListener("hashchange", () => {
         currentAmountOfLines = 1;
         current_location = location.hash.substring(1);
@@ -20,6 +21,12 @@ import * as qtexts from "./texts.js";
         let current_destination = tripAdvisor();
         destination = document.getElementById(current_destination);
         console.log("Reseledaren returnerar just nu:" + current_destination);
+
+        if(current_location != "intro1") {
+            let currentTextInput = document.getElementById("mytextinput_" + current_location);
+            currentTextInput.disabled = true;
+            currentTextInput.placeholder = "Please wait for the below text to finish printing.";
+        }
 
         if(current_location != "intro1") {
             typewriter();
@@ -76,7 +83,15 @@ import * as qtexts from "./texts.js";
             setTimeout(function () { showText(message, index, interval); }, interval);
         }
         else {
-            document.getElementById("intro1_submit").disabled = false;
+            if(current_location == "intro1") {
+                document.getElementById("intro1_submit").disabled = false;
+            }
+            else {
+                let currentTextInput = document.getElementById("mytextinput_" + current_location);
+                currentTextInput.placeholder = "user input";
+                currentTextInput.disabled = false;
+                currentTextInput.focus();
+            }
             return;
         }
     }
