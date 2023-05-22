@@ -26,6 +26,7 @@ main {
 	background-color: rgba(0, 0, 0, 0);
 	width: 1000px;
 	height: 562.5px;
+	position: absolute;
 }
 
 

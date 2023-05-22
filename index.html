@@ -35,13 +35,11 @@
 		<div class="scanline"></div>
 		<div class="wrapper">
 			<div class="content clearfix">
-		<main class="max-size pages">
-
+			<main class="max-size pages">
 
 <!-- INTRO -->
 		<section id="intro1">
 			<h1>--SIM_KMH_1D307--</h1>
-
 			<p>______________________________________________________________________________________________</p>
 			<div>
 				<span id="typedtext_intro1"></span><span class="blinking">|</span>
@@ -69,7 +67,7 @@
 			
 	<!-- ROOM FIRST ENTRY -->
 		<section id="room_main_1">
-			<h1>Rubrik Power</h1>
+			<h1>The Room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
 			<p>______________________________________________________________________________________________</p>
 			<div>
@@ -79,7 +77,7 @@
 
 	<!-- ROOM AFTER HAVING VISITED -->
 		<section id="room_main_2">
-			<h1>Rubrik Power</h1>
+			<h1>The Room</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
 			<p>______________________________________________________________________________________________</p>
 			<div>
@@ -87,7 +85,7 @@
 			</div></br>
 		</section>
 
-	<!-- MÅLNINGEN -->
+	<!-- PAINTING -->
 		<section id="room_painting">
 			<h1>The Painting</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
@@ -97,7 +95,28 @@
 			</div></br>
 		</section>
 
-	<!-- VÄGGEN -->
+	<!-- CHEST -->
+		<section id="room_chest">
+			<h1>The Chest</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_chest_open"></span><span class="blinking">|</span>
+			</div></br>
+			<a class="button" href="#room_chest_open">Open chest</a>
+		</section>
+
+		<section id="room_chest_open">
+			<h1>The Chest</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_chest_open"></span><span class="blinking">|</span>
+			</div></br>
+			<a class="button" href="#room_chest">Close chest</a>
+		</section>	
+
+	<!-- WALL -->
 		<section id="room_wall">
 			<h1>The Wall</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
@@ -107,7 +126,16 @@
 			</div></br>
 		</section>
 
+		<section id="room_wall_sledge">
+			<h1>The Wall</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_wall_sledge"></span><span class="blinking">|</span>
+			</div></br>
+		</section>
 
+	<!-- FLOOR -->
 		<section id="room_floor">
 			<h1>The Floor</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
@@ -117,7 +145,27 @@
 			</div></br>
 		</section>
 
-	<!-- PIANOT UTAN, SEN MED PIANOT -->
+	<!-- ROOM-MEME -->
+		<section id="room_the">
+			<h1>The Room</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_the"></span><span class="blinking">|</span>
+			</div></br>
+		</section>
+
+		<section id="room_mark">
+			<h1>The Room</h1>
+			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_room_mark"></span><span class="blinking">|</span>
+			</div></br>
+		</section>
+	
+
+	<!-- PIANO -->
 		<section id="room_piano_nokeys">
 			<h1>The Bureau</h1>
 			<input placeholder="USER INPUT" name="mytextsinput" onChange="navigator_function(this.value)" type="text" id="mytextinput"/>
@@ -165,33 +213,33 @@
 		</section>
 
 	<!-- HELP -->
-	<section id="help">
-		<h1>HELP PAGE</h1>
-		<a class="button" href="#room_main_2">Back to the Room</a>
-		<p>______________________________________________________________________________________________</p>
-		<div>
-			<span id="typedtext_help"></span><span class="blinking">|</span>
-		</div></br>
+		<section id="help">
+			<h1>HELP PAGE</h1>
+			<a class="button" href="#room_main_2">Back to the Room</a>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_help"></span><span class="blinking">|</span>
+			</div></br>
 
-	</section>
+		</section>
 
-	<section id="help_please">
-		<h1>HELP PAGE</h1>
-		<a class="button" href="#room_main_2">Back to the Room</a>
-		<p>______________________________________________________________________________________________</p>
-		<div>
-			<span id="typedtext_help_please"></span><span class="blinking">|</span>
-		</div></br>
-	</section>
-	
-	<section id="shadow_realm">
-		<h1>SHADOW REALM</h1>
-		<a class="button" href="#room_main_2">Back to the Room</a>
-		<p>______________________________________________________________________________________________</p>
-		<div>
-			<span id="typedtext_shadow_realm"></span><span class="blinking">|</span>
-		</div></br>
-	</section>	
+		<section id="help_please">
+			<h1>HELP PAGE</h1>
+			<a class="button" href="#room_main_2">Back to the Room</a>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_help_please"></span><span class="blinking">|</span>
+			</div></br>
+		</section>
+		
+		<section id="shadow_realm">
+			<h1>SHADOW REALM</h1>
+			<a class="button" href="#room_main_2">Back to the Room</a>
+			<p>______________________________________________________________________________________________</p>
+			<div>
+				<span id="typedtext_shadow_realm"></span><span class="blinking">|</span>
+			</div></br>
+		</section>	
 
 
 

@@ -185,7 +185,7 @@ nav.site ul li {
 
 .content { 
 	animation: scroll 3s 1;
-  overflow: hidden;
+  	overflow: hidden;
 	padding: 40px; 
 	/* position: relative; */
 	width: 95%;
@@ -329,3 +329,10 @@ a.button:hover {
 .blinking {
 	animation: blink-text 1000ms infinite;
 }
+
+/* .global_header {
+	position: top;
+	box-sizing: content-box;
+
+
+} */
