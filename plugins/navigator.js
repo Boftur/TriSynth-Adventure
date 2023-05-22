@@ -56,6 +56,23 @@ function navigator_function(n) {
         break;   
 
 
+    // CHEST
+        case "chest":
+            location.href = "#room_chest";
+            console.log("User input in Navigator: " + n); 
+        break;
+
+        case "left":
+            location.href = "#room_chest";
+            console.log("User input in Navigator: " + n); 
+        break;
+
+        case "go left":
+            location.href = "#room_chest";
+            console.log("User input in Navigator: " + n); 
+        break;
+
+
     // PAINTING        
         case "gogh":
             location.href = "#room_painting";
@@ -99,15 +116,57 @@ function navigator_function(n) {
             console.log("User input in Navigator: " + n);
         break;   
 
+        case "sledgehammer":
+            location.href = "#room_wall_sledge";
+            console.log("User input in Navigator: " + n);
+        break;  
+
+
+    // FLOOR
         case "floor":
             location.href = "#room_floor";
             console.log("User input in Navigator: " + n);
         break;  
 
+
+    // THE ROOM
+
+        case "room":
+            location.href = "#room_the";
+            console.log("User input in Navigator: " + n);
+        break;
+        
+        case "oh hi mark":
+            location.href = "#room_mark";
+            console.log("User input in Navigator: " + n);
+        break;
+
+        case "i did not hit her":
+            location.href = "#room_the";
+            console.log("User input in Navigator: " + n);
+        break;
+
+
+    // ENDING
+        case "unlock":
+            location.href = "#ending";
+            console.log("User input in Navigator: " + n);
+
+        case "open":
+            location.href = "#ending";
+            console.log("User input in Navigator: " + n);
+
+        case "use key":
+            location.href = "#ending";
+            console.log("User input in Navigator: " + n);
+
+
+    // DEFAULT
+    
         default:
             location.href = "#shadow_realm";
             console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
-        break;    
+        break;   
 
   }
 }
