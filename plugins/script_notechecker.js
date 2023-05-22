@@ -8,7 +8,11 @@ var correctNotes = [];
 correctNotes.push({hash:"#room_piano_keys", notes: [65,69,74,76]});
 correctNotes.push({hash:"#power", notes: [62,65,75,80,50]});
 
+let targetNotes = [];
+
 waxml.addEventListener("init", e => {
+
+    targetNotes = correctNotes.find(entry => entry.hash == window.location.hash).notes;
 
     // This logic applies to a waxmp-midi-controller inside a div with class= "subtractive"
     document.querySelectorAll("waxml-midi-controller").forEach(keyboard_midi => {
@@ -19,8 +23,6 @@ waxml.addEventListener("init", e => {
             // add keyNum to userNotes
             userNotes.push(e.detail.keyNum);
     
-            let targetNotes = correctNotes.find(entry => entry.hash == window.location.hash).notes;
-
             // print a message in a HTML element (with class="respons")
             // (uncomment when you have such an element) 
             // document.querySelector(".respons").innerHTML = "Keep on trying";
@@ -28,43 +30,54 @@ waxml.addEventListener("init", e => {
 
             if(userNotes.length == targetNotes.length){
 
-
-                if(JSON.stringify(userNotes) == JSON.stringify(targetNotes)){
-                    // goto success page
-                    switch(window.location.hash){
-        
-                        case "#room_piano_keys":
-                            window.location.href = "#room_exit";
-                            break;
-        
-                        case "#power":
-                            window.location.href = "#mid_p";
-                            break;
-                        
-                        
-                    }
-        
-                } else {
-
-
-                    // remove oldest note if userNotes are longer than correctNotes (not anymore)
-                    userNotes = [];
-                     alert("Nothing happens.");
-                    // loopThroughArray(["Nothing happens." ]);
-
-                }
-                
-                
-
+                checkKeyboardInput(userNotes);
             }
-    
-            // compare userNotes and correctNotes^
-            
 
-    
         });
+        keyboard_midi.addEventListener("midimessage"), m => {
+            console.log(m.detail.keyNum);
+    
+            // add keyNum to userNotes
+            userNotes.push(m.detail.keyNum);
+    
+            // print a message in a HTML element (with class="respons")
+            // (uncomment when you have such an element) 
+            // document.querySelector(".respons").innerHTML = "Keep on trying";
+            console.log(`Correct: ${targetNotes}, UserInput: ${userNotes}`);
+
+            if(userNotes.length == targetNotes.length){
+
+                checkKeyboardInput(userNotes);
+            }
+        }
     
     });
+
+function checkKeyboardInput(userNotes) {
+    if(JSON.stringify(userNotes) == JSON.stringify(targetNotes)){
+        // goto success page
+        switch(window.location.hash){
+
+            case "#room_piano_keys":
+                window.location.href = "#room_exit";
+                break;
+
+            case "#power":
+                window.location.href = "#mid_p";
+                break;
+            
+        }
+
+    } else {
+
+
+        // remove oldest note if userNotes are longer than correctNotes (not anymore)
+        userNotes = [];
+         alert("Nothing happens.");
+        // loopThroughArray(["Nothing happens." ]);
+
+    }
+}
     
 
 

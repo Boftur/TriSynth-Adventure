@@ -164,8 +164,7 @@ function navigator_function(n) {
     // DEFAULT
     
         default:
-            location.href = "#shadow_realm";
-            console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
+           
         break;   
 
   }
