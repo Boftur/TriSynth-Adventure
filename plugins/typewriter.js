@@ -3,7 +3,7 @@ import * as qtexts from "./texts.js";
 
     let destination = document.getElementById("typedtext_intro1");
 // Typewriter-variables
-    const iSpeed = 30; // time delay of print out
+    const iSpeed = 3; // time delay of print out
     const iMaxLines = 13; // maximum lines to be displayed before removing the first one
     let currentAmountOfLines = 1;
 
@@ -11,13 +11,30 @@ import * as qtexts from "./texts.js";
 
 // On hashchange redefines destination and shoots typewriter
     var current_location = "intro1"
+    document.getElementById("intro1_submit").disabled = true;
+
+
     window.addEventListener("hashchange", () => {
         currentAmountOfLines = 1;
         current_location = location.hash.substring(1);
+        document.getElementById("error_" + current_location).style.opacity = 0;
         console.log("Current_location is:" + current_location);
         let current_destination = tripAdvisor();
         destination = document.getElementById(current_destination);
         console.log("Reseledaren returnerar just nu:" + current_destination);
+
+        if(current_location != "intro1") {
+            let currentTextInput = document.getElementById("mytextinput_" + current_location);
+            currentTextInput.disabled = true;
+            currentTextInput.placeholder = "Please wait for the below text to finish printing.";
+        }
+
+        if(current_location == "room_piano_nokeys") {
+            document.getElementById("piano_nokeys_submit").disabled = true;
+        }
+        else if(current_location == "room_piano_keys") {
+            document.getElementById("piano_keys_submit").disabled = true;
+        }
 
         if(current_location != "intro1") {
             typewriter();
@@ -55,7 +72,7 @@ import * as qtexts from "./texts.js";
     }
 
     function showText(message, index, interval) {
-        console.log("UglyArray has " + uglyArray.length + " elements.");
+        //console.log("UglyArray has " + uglyArray.length + " elements.");
         if (index < message.length) {
             if(uglyArray.includes(index)) {
                 if(currentAmountOfLines >= iMaxLines) {
@@ -69,12 +86,28 @@ import * as qtexts from "./texts.js";
                     currentAmountOfLines++;
                 }
             }
-            if(message[index] === undefined) {
-                return;
-            }
 
             destination.getElementsByTagName('span')[destination.getElementsByTagName('span').length - 1].innerHTML += message[index++];
             setTimeout(function () { showText(message, index, interval); }, interval);
+        }
+        else {
+            if(current_location == "intro1") {
+                document.getElementById("intro1_submit").disabled = false;
+            }
+            else {
+                let currentTextInput = document.getElementById("mytextinput_" + current_location);
+                currentTextInput.placeholder = "user input";
+                currentTextInput.disabled = false;
+                currentTextInput.focus();
+            }
+            
+            if(current_location == "room_piano_nokeys") {
+                document.getElementById("piano_nokeys_submit").disabled = false;
+            }
+            else if(current_location == "room_piano_keys") {
+                document.getElementById("piano_keys_submit").disabled = false;
+            }
+            return;
         }
     }
 
@@ -91,12 +124,13 @@ import * as qtexts from "./texts.js";
             }
             uglyString += element;
         };
-        console.log("End of Loopthrougharray. UglyArray has " + uglyArray.length + " elements.");
+        //console.log("End of Loopthrougharray. UglyArray has " + uglyArray.length + " elements.");
         return uglyString;
     }
 
     function writeAllLines(arrayOfStrings) {
         let startIndex = 0;
+        destination.innerHTML="";
         let allLines = loopThroughArray(arrayOfStrings);
         let firstLine = document.createElement('span');
         destination.appendChild(firstLine);

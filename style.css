@@ -230,6 +230,10 @@ textarea {
 
 }
 
+.error_msg {
+	color:red;
+}
+
 textarea {
 	margin-bottom: 20px;
 	overflow: auto;
@@ -244,7 +248,7 @@ a.button:focus {
 }
 
 input[type=submit],
-a.button {
+.button {
 	background: transparent;
 	border: 1px solid #00dd00;
 	clear: both;
@@ -263,7 +267,7 @@ a.button {
 }
 
 input[type=submit]:hover,
-a.button:hover {
+.button:enabled:hover {
 	background: #00dd00;
 	color: #383838;
 	opacity: 0.8;

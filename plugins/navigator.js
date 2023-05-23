@@ -1,10 +1,15 @@
 
-let destination_input = document.getElementById("mytextinput")
+let destination_input = document.getElementById("mytextinput");
 
 console.log(destination_input)
 
 function navigator_function(n) {
     switch(n) {
+        case "intro2":
+            location.href = "#intro2";
+            console.log("User input in Navigator: " + n);
+        break;
+        
         case "start":
             location.href = "#room_main_1";
             console.log("User input in Navigator: " + n);
@@ -48,7 +53,12 @@ function navigator_function(n) {
         case "straight ahead":
             location.href = "#room_piano_nokeys";
             console.log("User input in Navigator: " + n);
-        break;   
+        break;
+        
+        case "room_piano_keys":
+            location.href = "#room_piano_keys";
+            console.log("User input in Navigator: " + n);
+        break;
 
 
     // CHEST
@@ -159,8 +169,12 @@ function navigator_function(n) {
     // DEFAULT
     
         default:
-            location.href = "#shadow_realm";
-            console.log("User input in Navigator sent them to the shadow realm. (Their input was: " + n + ")");
+            let current_location = location.hash.substring(1);
+            console.log("Showing Error message now");
+            console.log("Error element: error_" + current_location);
+            document.getElementById("error_" + current_location).style.opacity = 1;
+            setTimeout(function() { document.getElementById("error_" + current_location).style.opacity = 0; }, 2000);
+           
         break;   
 
   }

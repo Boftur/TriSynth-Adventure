@@ -25,7 +25,7 @@ export function quest_text(user_input) {
             return Array(
                 "You will be put in a simulated room where the stated goal is to escape your current predicament by finding the right key.",
 
-                "Provided you're not a violinist a wet night at the pub, I'm sure you'll manage.",
+                "Provided you're not a violinist during a wet night at the pub, I'm sure you'll manage.",
                 
                 "-",
                 
