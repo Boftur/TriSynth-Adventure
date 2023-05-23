@@ -3989,8 +3989,8 @@ class InteractionManager {
 				this.midiManager.noteOff(e.detail.channel, e.detail.keyNum, e.detail.velocity);
 			});
 			if(el.midiIn){
-				this.midiManager.addEventListener("MIDI:NoteOn", e => el.indicateKey(e.detail.keyNum, true));
-				this.midiManager.addEventListener("MIDI:NoteOff", e => el.indicateKey(e.detail.keyNum, false));
+				this.midiManager.addEventListener("MIDI:NoteOn", e => el.dispatchEvent(new customEvent("keyDown", {detail:e.detail})));
+				this.midiManager.addEventListener("MIDI:NoteOff", e => el.dispatchEvent(new customEvent("keyUp", {detail:e.detail})));
 			}
 		});
 		
