@@ -3,7 +3,7 @@ import * as qtexts from "./texts.js";
 
     let destination = document.getElementById("typedtext_intro1");
 // Typewriter-variables
-    const iSpeed = 3; // time delay of print out
+    const iSpeed = 15; // time delay of print out
     const iMaxLines = 13; // maximum lines to be displayed before removing the first one
     let currentAmountOfLines = 1;
 

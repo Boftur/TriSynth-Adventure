@@ -62,11 +62,11 @@ export function quest_text(user_input) {
                 "There are only three objects:",
                 " ",
                 "There is a large chest in dark oak along the wall to your left, of the type that would suit a brandy-smelling sea captain. On the heavy lid is merely a clasp.",
-
+                " ",
                 "Straight ahead is what appears to be a wooden bureau, what looks like ivory fish-fingers strewn about. Occasional black ones are posed at regular intervals.",
-
+                " ",
                 "On the right wall is a large oil painting. An ornate frame of matted silver envelopes a lonely-looking Arthurian castle. Doubtlessly a romantics rose-tinted reminiscence of darker times.",
-
+                " ",
                 "Behind you is a solid wall. Just a wall." 
 
             );
